@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Student Website | ICT251 Web Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">ICT251 Web Technologies</p>
+            <h1>My Student Website</h1>
+            <p class="intro">A personal website showing my interests, learning plan, photos, media and contact information.</p>
+        </div>
+    </header>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#about">About Me</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#learning">Learning Plan</a>
+            <a href="#photos">My Photos</a>
+            <a href="#media">My Media</a>
+            <a href="#contact">Contact</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">Learn Web Development</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                My name is <strong>[Your Name]</strong>, and I am a student interested in learning how websites are
+                designed and developed. I am studying web technologies so that I can understand how HTML gives a page
+                its structure and how CSS makes it attractive and easy to use. I want to improve my practical skills
+                by creating websites, testing them in a browser and learning from mistakes. My goal is to become more
+                confident when building responsive and well-organised web pages.
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Reading</li>
+                <li>Football</li>
+                <li>Coding</li>
+            </ul>
+        </section>
+
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>I will use regular practice to improve my web development skills.</p>
+            <ol>
+                <li>Practise writing semantic HTML and organising pages with meaningful sections.</li>
+                <li>Build CSS layouts and practise responsive design on both computers and phones.</li>
+                <li>Create small projects, test them in a browser and improve them using feedback.</li>
+            </ol>
+
+            <div class="table-wrap">
+                <table>
+                    <caption>Weekly Web Learning Plan</caption>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Topic</th>
+                            <th>Practice Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Monday</td><td>HTML</td><td>Create and structure a webpage.</td></tr>
+                        <tr><td>Wednesday</td><td>CSS</td><td>Style sections, links, forms and images.</td></tr>
+                        <tr><td>Friday</td><td>Responsive Design</td><td>Test the website at a narrow screen width.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="photos" class="content-section" aria-labelledby="photos-title">
+            <h2 id="photos-title">My Photos</h2>
+            <p class="section-note">Tap <strong>My Photos</strong> in the navigation above to jump to this gallery and display the three pictures.</p>
+            <div class="photo-gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="Photo showing my study space">
+                    <figcaption>My study space.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Photo representing web development practice">
+                    <figcaption>Practising web development.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="Photo representing student life">
+                    <figcaption>A moment from student life.</figcaption>
+                </figure>
+            </div>
+            <p class="replacement-note">Replace these sample images with your own photos or photos you are allowed to share.</p>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <h3>Introduction Video</h3>
+                    <video controls>
+                        <source src="videos/intro.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <p><strong>Written summary:</strong> In the video, I introduce myself, state my programme and explain one web skill I hope to learn.</p>
+                </div>
+                <div class="media-card">
+                    <h3>Audio Clip</h3>
+                    <audio controls>
+                        <source src="videos/voice.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>This recording briefly describes one of my hobbies or explains why I am studying web technologies.</p>
+                </div>
+            </div>
+            <p class="replacement-note">Add your own 30–60 second introduction video as <code>videos/intro.mp4</code> and your 15–30 second recording as <code>videos/voice.mp3</code>.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>The form is a browser demonstration only and does not send data to a server.</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="general">General</option>
+                        <option value="web">Web Development</option>
+                        <option value="school">School Work</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit">Submit Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My Student Website | ICT251 Web Technologies</p>
+        </div>
+    </footer>
+</body>
+</html>

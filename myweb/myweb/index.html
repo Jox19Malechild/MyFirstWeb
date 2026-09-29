@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haggai | Computer Science Student at Mulungushi University</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Haggai</h1>
+    <p class="tagline">Computer science student at Mulungushi University</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#about">About Me</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#plan">My Learning Plan</a>
+    <a href="#photos">My Photos</a>
+    <a href="#media">My Media</a>
+    <a href="#contact">Contact</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn web development (MDN)</a>
+  </nav>
+
+  <main>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        I am a student at Mulungushi University in the School of Engineering and Technology,
+        studying computer science. I enjoy solving problems with code and I like understanding
+        how things work behind the screen. This website is my second step in learning web
+        technologies, and I am using it to practise HTML structure, CSS styling and working with
+        photos, video and audio. My goal is to build clean websites that are easy to use on any device.
+      </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Reading</li>
+        <li>Football</li>
+        <li>Coding</li>
+      </ul>
+    </section>
+
+    <section id="plan" class="content-section">
+      <h2>My Learning Plan</h2>
+      <h3>Steps to improve my web skills</h3>
+      <ol>
+        <li>Finish the HTML and CSS lessons and rebuild this page without copying.</li>
+        <li>Learn responsive layout with Flexbox and Grid.</li>
+        <li>Learn basic JavaScript and add one interactive feature to my site.</li>
+        <li>Publish my projects on GitHub and keep practising every week.</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table>
+          <caption>My weekly web learning plan</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Practice task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML structure</td>
+              <td>Build a page with header, nav, main and footer</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>CSS layout</td>
+              <td>Make a photo gallery with Flexbox</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Forms</td>
+              <td>Create a contact form with required fields</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Git and GitHub</td>
+              <td>Commit and push the week's work</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Hidden until the visitor taps "My Photos" in the nav -->
+    <section id="photos" class="content-section">
+      <h2>My Photos</h2>
+      <p class="hint">Tap another link in the menu to keep exploring.</p>
+      <div class="gallery">
+        <figure>
+          <img src="images/photo1.jpg" alt="Photo 1: replace with a description of your first photo">
+          <figcaption>Photo 1: replace this caption to explain what the photo shows.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo2.jpg" alt="Photo 2: replace with a description of your second photo">
+          <figcaption>Photo 2: replace this caption to explain what the photo shows.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo3.jpg" alt="Photo 3: replace with a description of your third photo">
+          <figcaption>Photo 3: replace this caption to explain what the photo shows.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>Self-introduction video</h3>
+      <video controls preload="metadata">
+        <source src="videos/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>A short video where I introduce myself, my programme and the web skill I hope to learn.</p>
+      <details>
+        <summary>Read the written summary of the video</summary>
+        <p>
+          Hello, my name is Haggai. I study computer science at Mulungushi University.
+          One web skill I hope to learn is building responsive websites that work well on phones and computers.
+        </p>
+      </details>
+
+      <h3>Audio clip</h3>
+      <audio controls preload="metadata">
+        <source src="videos/voice.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <p>In this recording I talk about one of my hobbies and why I am studying web technologies.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p class="note">
+        This form is a browser demonstration only. It does not send your data anywhere.
+      </p>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="question">Question</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Haggai | ICT251 Web Technologies, Mulungushi University</p>
+  </footer>
+
+</body>
+</html>

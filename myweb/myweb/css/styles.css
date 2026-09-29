@@ -1,0 +1,343 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --green: #1f5c3a;
+  --green-dark: #143d27;
+  --orange: #b35400;
+  --ink: #1d2a24;
+  --paper: #f5f7f4;
+  --card: #ffffff;
+  --line: #b9c8bf;
+}
+
+/* ---------- Element selectors ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+a {
+  color: var(--green);
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--green-dark);
+  color: #ffffff;
+  padding: 2.5rem 1.25rem 2rem;
+  text-align: center;
+  border-bottom: 6px solid var(--orange);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  color: #dbe8df;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  background-color: var(--green);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: #ffffff;
+  color: var(--green-dark);
+  outline: 3px solid var(--orange);
+  outline-offset: 1px;
+}
+
+/* ---------- Main and sections ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Class selector for repeated sections. Shows padding, margin and a visible border */
+.content-section {
+  background-color: var(--card);
+  padding: 1.5rem;
+  margin: 1.25rem 0;
+  border: 2px solid var(--line);
+  border-left: 8px solid var(--green);
+  border-radius: 6px;
+}
+
+/* Id selector for one unique section */
+#about {
+  background-color: #eaf2ec;
+  border-left-color: var(--orange);
+}
+
+.content-section h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  color: var(--green-dark);
+}
+
+.content-section h3 {
+  font-size: 1.2rem;
+  color: var(--green-dark);
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Photo gallery: hidden until "My Photos" is tapped ---------- */
+#photos {
+  display: none;
+}
+
+#photos:target {
+  display: block;
+  animation: reveal 0.4s ease;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hint {
+  margin-top: 0;
+  color: #4b5b52;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--paper);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery figcaption {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- Media ---------- */
+video {
+  display: block;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 6px;
+}
+
+details {
+  margin: 0.5rem 0 1rem;
+  padding: 0.6rem 0.9rem;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+/* ---------- Table ---------- */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+caption {
+  padding: 0.5rem 0;
+  font-weight: 700;
+  text-align: left;
+  color: var(--green-dark);
+}
+
+th, td {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  background-color: var(--green);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--paper);
+}
+
+/* ---------- Form ---------- */
+.note {
+  padding: 0.6rem 0.9rem;
+  background-color: #fff3e6;
+  border-left: 4px solid var(--orange);
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  color: var(--ink);
+  background-color: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--orange);
+  outline-offset: 1px;
+  border-color: var(--green);
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 1rem;
+  padding: 0.75rem 1.6rem;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+  background-color: var(--green-dark);
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: var(--green-dark);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .content-section {
+    padding: 1rem;
+  }
+
+  button[type="submit"] {
+    align-self: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #photos:target { animation: none; }
+}

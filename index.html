@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacques | Computer Science Student at Mulungushi University</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:,">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Introductory area: name, programme, short introduction and a button -->
+  <header>
+    <h1>JACQUES</h1>
+    <p class="tagline">Computer science student at Mulungushi University</p>
+    <p class="intro">
+      Welcome to my portfolio. I am learning to build clean, responsive websites
+      and I enjoy turning ideas into working code.
+    </p>
+    <a class="btn" href="#projects">View My Projects</a>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#about">About Me</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#plan">My Learning Plan</a>
+    <a href="#projects">Projects</a>
+    <a href="#photos">My Photos</a>
+    <a href="#media">My Media</a>
+    <a href="#contact">Contact</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn web development (MDN)</a>
+    <!-- JAVASCRIPT FEATURE: theme switch -->
+    <button type="button" id="theme-toggle" class="theme-btn" aria-pressed="false">Dark mode</button>
+  </nav>
+
+  <main>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        I am a student at Mulungushi University in the School of Engineering and Technology,
+        studying computer science. I enjoy solving problems with code and I like understanding
+        how things work behind the screen. This website is my third step in learning web
+        technologies, and I am using it to practise HTML structure, CSS styling, JavaScript
+        and working with photos, video and audio. My goal is to build clean websites that are
+        easy to use on any device.
+      </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Exploring new ideas</li>
+        <li>Playing music</li>
+        <li>Watching football</li>
+      </ul>
+    </section>
+
+    <section id="plan" class="content-section">
+      <h2>My Learning Plan</h2>
+      <h3>Steps to improve my web skills</h3>
+      <ol>
+        <li>Finish the HTML and CSS lessons and rebuild this page without copying.</li>
+        <li>Learn responsive layout with Flexbox and Grid.</li>
+        <li>Learn basic JavaScript and add interactive features to my site.</li>
+        <li>Publish my projects on GitHub and keep practising every week.</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table>
+          <caption>My weekly web learning plan</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Practice task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML structure</td>
+              <td>Build a page with header, nav, main and footer</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>CSS layout</td>
+              <td>Make a photo gallery with Flexbox</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Forms</td>
+              <td>Create a contact form with required fields</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Git and GitHub</td>
+              <td>Commit and push the week's work</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Projects / Skills: three examples with expandable details (JAVASCRIPT FEATURE: expandable content) -->
+    <section id="projects" class="content-section">
+      <h2>Projects and Skills</h2>
+      <p class="hint">Three things I have learned so far. Use the buttons to open or close the details.</p>
+
+      <article class="project">
+        <h3>HTML page structure</h3>
+        <p>I can build a page with header, nav, main, sections and footer.</p>
+        <button type="button" class="toggle-btn" aria-expanded="false" aria-controls="details-html">Show details</button>
+        <div id="details-html" class="project-details" hidden>
+          <p>I learned to use semantic tags, lists, tables, images with alt text, and audio and video with controls. This site is built from these parts.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>CSS styling and layout</h3>
+        <p>I can style a page so it looks good on phones and computers.</p>
+        <button type="button" class="toggle-btn" aria-expanded="false" aria-controls="details-css">Show details</button>
+        <div id="details-css" class="project-details" hidden>
+          <p>I learned colours, spacing with the box model, Flexbox, Grid, hover and focus states, and media queries for small screens.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>JavaScript interaction</h3>
+        <p>I can make a page respond when a visitor clicks or types.</p>
+        <button type="button" class="toggle-btn" aria-expanded="false" aria-controls="details-js">Show details</button>
+        <div id="details-js" class="project-details" hidden>
+          <p>I learned variables, functions, events and DOM updates. On this site I used them for form validation, a theme switch, a photo viewer and these expandable details.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- My Photos: now always visible, with a Previous/Next viewer (JAVASCRIPT FEATURE: gallery viewer) -->
+    <section id="photos" class="content-section">
+      <h2>My Photos</h2>
+      <figure class="viewer">
+        <img id="viewer-img" src="images/jox.jpg" alt="Portrait photo of Jacques, a computer science student at Mulungushi University">
+        <figcaption id="viewer-caption">Photo 1: A portrait of me, Jacques, the student who built this website.</figcaption>
+      </figure>
+      <div class="viewer-controls">
+        <button type="button" id="prev-btn" class="btn-secondary">Previous</button>
+        <span id="viewer-count" aria-live="polite">Photo 1 of 3</span>
+        <button type="button" id="next-btn" class="btn-secondary">Next</button>
+      </div>
+    </section>
+
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>Self-introduction video</h3>
+      <video controls preload="metadata">
+        <source src="videos/MyVideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>A short video where I introduce myself, my programme and the web skill I hope to learn.</p>
+      <details>
+        <summary>Read the written summary of the video</summary>
+        <p>
+          Hello, my name is JACQUES. I study computer science at Mulungushi University.
+          One web skill I hope to learn is building responsive websites that work well on phones and computers.
+        </p>
+      </details>
+
+      <h3>Audio clip</h3>
+      <audio controls preload="metadata">
+        <source src="videos/MyAudio.aac" type="audio/aac">
+        Your browser does not support the audio tag.
+      </audio>
+      <p>In this recording I talk about one of my hobbies and why I am studying web technologies.</p>
+    </section>
+
+    <!-- Contact: validated with JavaScript (compulsory feature) -->
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p class="note">
+        Browser demonstration only — no message is sent. Your data stays on this page.
+      </p>
+      <form id="contact-form" action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required aria-describedby="name-error">
+        <p class="error" id="name-error" aria-live="polite"></p>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-describedby="email-error">
+        <p class="error" id="email-error" aria-live="polite"></p>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="Question">Question</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+        <p class="error" id="message-error" aria-live="polite"></p>
+
+        <button type="submit">Check my message</button>
+      </form>
+
+      <div id="form-preview" class="preview" hidden aria-live="polite">
+        <h3>Preview</h3>
+        <p id="preview-status"></p>
+        <dl>
+          <dt>Name</dt>
+          <dd id="preview-name"></dd>
+          <dt>Email</dt>
+          <dd id="preview-email"></dd>
+          <dt>Topic</dt>
+          <dd id="preview-topic"></dd>
+          <dt>Message</dt>
+          <dd id="preview-message"></dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Jacques | ICT251 Web Technologies, Mulungushi University</p>
+    <p><a href="https://github.com/Jox19Malechild/MyFirstWeb" target="_blank" rel="noopener">View Source on GitHub</a></p>
+  </footer>
+
+</body>
+</html>
